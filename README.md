@@ -1,8 +1,8 @@
 # AI Customer Support Agent
 
-## An NLP-based customer support agent using historical customer-service conversations.
+## An NLP based customer support agent using historical customer service conversations.
 
-An AI/NLP-based customer support agent built using historical Amazon customer-support conversations from the Customer Support on Twitter dataset.
+An AI/NLP based customer support agent built using historical Amazon customer-support conversations from the Customer Support on Twitter dataset.
 
 The system:
 1. Classifies a customer message into a support intent.
