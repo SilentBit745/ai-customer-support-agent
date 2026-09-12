@@ -1,6 +1,6 @@
 # AI Customer Support Agent
 
-## Hiver SDE Intern Take-Home Assignment
+## Hiver SDE Intern Take Home Assignment
 
 An AI/NLP-based customer support agent built using historical Amazon customer-support conversations from the Customer Support on Twitter dataset.
 
