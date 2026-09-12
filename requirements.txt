@@ -1,5 +1,2 @@
 pandas
 scikit-learn
-openai
-python-dotenv
-tqdm
