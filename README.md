@@ -1,63 +1,59 @@
 # AI Customer Support Agent
 
-## An NLP based customer support agent using historical customer service conversations.
+An NLP based customer support agent that understands customer messages, finds similar historical conversations, and suggests a relevant support response.
 
-An AI/NLP based customer support agent built using historical Amazon customer-support conversations from the Customer Support on Twitter dataset.
+## Overview
 
-The system:
-1. Classifies a customer message into a support intent.
-2. Retrieves similar historical Amazon support conversations.
-3. Drafts a reply using historical support responses.
-4. Decides whether the issue should be auto-handled or escalated.
+This project uses real customer support conversations from Twitter to build a lightweight support assistant.
 
-## Brand Selected
+The system can:
 
-Amazon Help (@AmazonHelp)
+- Identify the type of customer problem.
+- Find similar past support conversations.
+- Suggest a response based on historical support replies.
+- Decide whether to handle the issue automatically or send it to a human.
 
-Amazon was selected because it has a large number of customer-support conversations in the dataset.
+## Brand
+
+The project focuses on Amazon customer support conversations from `@AmazonHelp`.
 
 ## Dataset
 
-Customer Support on Twitter dataset:
+The project uses the Customer Support on Twitter dataset.
 
+Dataset:
 `thoughtvector/customer-support-on-twitter`
 
-Only Amazon conversations were used.
+Only Amazon conversations are used.
 
-The full dataset was not processed during inference. A 20,000-row sample of Amazon customer conversations was used for retrieval to keep execution fast.
+For faster processing, the retrieval system uses a 20,000 row sample of the Amazon conversation data.
 
-## Intents
+## Intent Categories
 
-The system uses these intents:
+The following support categories are used:
 
-- delivery_delay
-- delivery_missing
-- delivery_wrong_or_damaged
-- refund_or_return
-- payment_or_price
-- account_or_login
-- prime_or_subscription
-- product_or_service_issue
-- order_change_or_cancellation
-- other
+- Delivery delay
+- Missing delivery
+- Wrong or damaged item
+- Refund or return
+- Payment or price
+- Account or login
+- Prime or subscription
+- Product or service issue
+- Order change or cancellation
+- Other
 
-## System Pipeline
+## How It Works
 
+```text
 Customer message
-        ↓
+       ↓
 Intent classification
-        ↓
-TF-IDF similarity search
-        ↓
-Retrieve similar historical Amazon conversations
-        ↓
-Use historical Amazon response as draft
-        ↓
-Auto-handle / Escalate decision
-
-## How to Run
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
+       ↓
+Find similar conversations
+       ↓
+Retrieve historical support replies
+       ↓
+Generate a support response
+       ↓
+Auto-handle or escalate
